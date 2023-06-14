@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .topColor {
+        background-color: #fff;
+        color: #000;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+
+      .topColor a {
+        color: #292828;
+      }
+
+      .nav-item:hover {
+        border-bottom: 2px solid #f4a424;
+      }
+
+      .nav-link:focus,
+      .nav-link:hover {
+        color: #242222;
+      }
+
+      #box {
+        display: flex;
+        width: 100%;
+      }
+
+      #filter {
+        background-color: white;
+        width: 20%;
+        height: 337px;
+        border-radius: 12px;
+        margin-left: 30px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        /* border: 1px solid red; */
+        padding: 10px 10px;
+      }
+
+      #filter > select {
+        padding: 7px;
+        margin: 20px;
+        margin-bottom: 70px;
+        border: 1px solid teal;
+      }
+
+      #filter > label {
+        color: teal;
+        font-size: 22px;
+      }
+
+      #btnDiv {
+        margin: auto;
+        width: 70%;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      #btnDiv > input {
+        padding: 5px;
+        width: 20%;
+        margin-left: 150px;
+      }
+
+      #btnDiv > button {
+        padding: 10px;
+        margin-left: 30px;
+        background-color: white;
+        border: 1px solid lightskyblue;
+      }
+
+      #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        width: 75%;
+        margin: auto;
+      }
+
+      #container > a {
+        text-decoration: none;
+      }
+
+      #container > a > div {
+        padding: 12px;
+        border-radius: 15px;
+        color: black;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
+      #container > a > div > h4 {
+        margin: 0px;
+        color: rgb(22, 53, 53);
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      #container > a > div > h2 {
+        color: rgb(22, 53, 53);
+      }
+      #container > a > div > div {
+        margin: 0px;
+        display: flex;
+        padding-right: 20px;
+        font-size: 18px;
+        color: rgb(22, 53, 53);
+        justify-content: space-between;
+      }
+
+      #container img {
+        width: 100%;
+        height: 250px;
+        border-radius: 12px;
+      }
+
+      #travelImg {
+        margin: auto;
+        margin-bottom: 60px;
+        width: 100%;
+        text-align: center;
+        font-family: bradley hand, cursive;
+      }
+
+      #travelImg > img {
+        width: 100%;
+      }
+
+      #btnbox {
+        width: 25%;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        margin-top: 60px;
+        margin-bottom: 70px;
+      }
+
+      body {
+        box-sizing: border-box;
+        background-color: #efefef;
+      }
+      /* #btnbox {
+        /* border: 1px solid red; */
+      /* width: 100%;
+        padding: 10px; */
+      /* margin-bottom: 70px; */
+      /* } */
+
+      #btnbox > button {
+        width: 30px;
+        border: 1.5px solid rgb(8, 163, 187);
+        background-color: white;
+      }
+
+      @media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        #box {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+        }
+        #filter {
+          width: 75%;
+          height: 200px;
+          margin-bottom: 10px;
+        }
+        #filter > select {
+          padding: 6px;
+          margin: 1px;
+          margin-bottom: 16px;
+          border: 1px solid teal;
+        }
+        #filter > label {
+          color: teal;
+          font-size: 15px;
+        }
+        #btnDiv > input {
+          padding: 5px;
+          width: 100%;
+          margin-left: 0;
+        }
+        #container {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 30px;
+          width: 75%;
+          margin: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <!-- <a href="">
+    <div>
+        <img src="" alt="">
+        <h2>name</h2>
+        <h4>location</h4>
+        <div>
+            <h5>rating</h5>
+            <h5>price</h5>
+        </div>
+    </div>
+</a> -->
+
+  <body>
+    <div id="travelImg">
+      <img src="./intro-1656331262.jpg" alt="" />
+      <h1>Find your second home here</h1>
+    </div>
+    <div id="btnDiv">
+      <button id="increase">Price -⬆️</button>
+      <button id="decrease">Price -⬇️</button>
+      <input type="text" id="searchBar" placeholder="Search for Location" />
+    </div>
+    <div id="box">
+      <div id="filter">
+        <label for="">filter by Price range</label>
+
+        <select name="Price" id="priceSelect">
+          <option value="">Select price range</option>
+          <option value="500">below 500</option>
+          <option value="700">below 700</option>
+          <option value="1000">below 1000</option>
+        </select>
+        <br />
+        <label for="Rating">filter by Rating range</label>
+        <br />
+        <select name="" id="ratingSelect">
+          <option value="">Select Rating</option>
+          <option value="3">below 3</option>
+          <option value="5">from 3 to 5</option>
+        </select>
+      </div>
+      <div id="container"></div>
+    </div>
+
+    <div id="btnbox"></div>
+  </body>
+</html>
+<script src="./discover.js"></script>
