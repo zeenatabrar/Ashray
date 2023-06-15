@@ -44,11 +44,11 @@ function display(data) {
 
   for (let i = 0; i < data.length; i++) {
     let anchor = document.createElement("a");
-    anchor.setAttribute("href", "./destination.html");
+    anchor.setAttribute("href", "./hotel.html");
     anchor.addEventListener("click", function () {
-      let destination = [];
-      destination.push(data[i]);
-      localStorage.setItem("destination", JSON.stringify(destination));
+      let hotel = [];
+      hotel.push(data[i]);
+      localStorage.setItem("hotel", JSON.stringify(hotel));
     });
 
     let card = document.createElement("div");
@@ -66,7 +66,7 @@ function display(data) {
     let box = document.createElement("div");
 
     let rating = document.createElement("h5");
-    rating.innerText = `⭐ ${Number(data[i].rating) / 20}`;
+    rating.innerText = `⭐ ${Number(data[i].rating)}`;
 
     let price = document.createElement("h5");
     price.innerText = `₹ ${Number(data[i].price) * 10} / Person`;

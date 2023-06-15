@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hotel</title>
+    <style>
+      .topColor {
+        background-color: #fff;
+        color: #000;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+
+      .topColor a {
+        color: #292828;
+      }
+
+      .nav-item:hover {
+        border-bottom: 2px solid #f4a424;
+      }
+
+      .nav-link:focus,
+      .nav-link:hover {
+        color: #242222;
+      }
+
+      #conty > div {
+        width: 90%;
+        padding: 25px;
+        margin: auto;
+        color: teal;
+        background-color: #fff;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+
+      img {
+        width: 100%;
+        margin: auto;
+      }
+
+      #book {
+        width: 30%;
+        height: 550px;
+        padding: 20px;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+
+      #box2 {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 100px;
+      }
+
+      #conty {
+        width: 60%;
+      }
+
+      #detail {
+        border-radius: 15px;
+        background-color: #dfe2f4;
+        padding: 30px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 75%;
+        margin: auto;
+      }
+
+      #detail > select {
+        padding: 10px;
+      }
+
+      #bookBtn {
+        padding: 10px;
+        display: block;
+        margin: auto;
+        background-color: rgb(246, 116, 30);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="box2">
+      <div id="conty"></div>
+
+      <div id="book">
+        <h2>Book your hotel here</h2>
+        <div id="detail">
+          <label for="">Select Your City</label>
+          <br />
+          <select name="" id="city">
+            <option value="">cities</option>
+            <option value="Agartala, Tripura, India">
+              Agartala, Tripura, India
+            </option>
+            <option value="Bengaluru, Karnataka, India">
+              Bengaluru, Karnataka, India
+            </option>
+            <option value="Bhopal, Madhya Pradesh, India">
+              Bhopal, Madhya Pradesh, India
+            </option>
+            <option value="Chandigarh, Chandigarh, India">
+              Chandigarh, Chandigarh, India
+            </option>
+            <option value="Cochin, Kerala, India">Cochin, Kerala, India</option>
+            <option value="Delhi, NCT of Delhi, India">
+              Delhi, NCT of Delhi, India
+            </option>
+            <option value="Indore, Madhya Pradesh, India">
+              Indore, Madhya Pradesh, India
+            </option>
+            <option value="Jaipur, Rajasthan, India">
+              Jaipur, Rajasthan, India
+            </option>
+            <option value="Mumbai, Maharashtra, India">
+              Mumbai, Maharashtra, India
+            </option>
+            <option value="Dehradun, Uttarakhand, India">
+              Dehradun, Uttarakhand, India
+            </option>
+          </select>
+          <br />
+          <label for="">Start Date</label>
+          <br />
+          <input type="date" name="start" id="startDate" />
+          <br />
+          <label for="">End Date</label>
+          <br />
+          <input type="date" name="end" id="endDate" />
+          <br />
+          <label for="">Number Of Persons</label>
+          <br />
+          <input type="number" name="" id="NoOfperson" />
+        </div>
+        <button id="bookBtn">BOOK NOW</button>
+      </div>
+    </div>
+  </body>
+  <script src="./hotel.js"></script>
+</html>
