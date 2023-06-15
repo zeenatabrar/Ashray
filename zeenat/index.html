@@ -11,17 +11,25 @@
         margin: 0px;
         padding: 0px;
         box-sizing: border-box;
-        background-color: rgb(214, 205, 193);
+        background: linear-gradient(rgb(224, 171, 180), rgb(247, 217, 163), rgb(216, 186, 186));
 
     }
 
     .main {
+        position: relative;
         width: 100%;
         height: 650px;
 
         /* background: linear-gradient(124deg, rgb(49, 89, 97) 35%, rgb(107, 140, 188) 100%); */
-        background-image: url("https://wallpaperaccess.com/full/6688071.jpg");
+        /* background-image: url("https://cdn.dribbble.com/users/6498639/screenshots/15138706/media/0262f2a4841a14755bd96261e11b6334.gif"); */
         background-repeat: no-repeat;
+    }
+
+    #imgg {
+        /* display: none; */
+        width: 100%;
+        position: absolute;
+        top: 0;
     }
 
     .nav {
@@ -86,8 +94,16 @@
 
     }
 
+    .hotels img {
+        width: 350px;
+    }
+
+    /* .hotels div1{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} */
+
     .head>h1 {
-        color: white;
+        color: rgb(196, 38, 38);
         text-align: center;
         padding-top: 50px;
         font-size: 70px;
@@ -123,6 +139,17 @@
 
     .offers>h1 {
         margin-left: 50px;
+        margin-top: 550px;
+    }
+
+    .div1>h1 {
+        font-size: 50px;
+    }
+
+    .div3>p {
+        font-size: 20px;
+        line-height: 40px;
+        padding-bottom: 30px;
     }
 
     .cards {
@@ -136,13 +163,29 @@
 
     }
 
+    .become_member {
+        margin-top: 70px;
+        padding-top: 50px;
+        background: linear-gradient(pink, rgb(207, 165, 87));
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        ;
+        width: 80%;
+        margin-left: 150px;
+    }
+
+    .cards h3 {
+        text-align: center;
+    }
+
     .become_member>h1 {
         text-align: center;
+        font-size: 50px;
     }
 
     .inner {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        margin: auto;
 
     }
 
@@ -185,9 +228,12 @@
     }
 
     .box1 {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        ;
+        border-radius: 20px;
         background-color: grey;
         width: 40%;
-        height: 460px;
+        height: 440px;
         text-align: center;
         margin: auto;
         /* padding-top: 100px; */
@@ -196,27 +242,49 @@
     .box1>h1 {
         padding-top: 50px;
     }
-    .quest2 a{
+
+    .quest2 a {
         text-decoration: none;
         color: black;
     }
 
 
-    .questions{
+    .questions {
         margin-top: 80px;
-    display: flex;
-    justify-content: space-around;
-    /* margin: auto; */
-    align-items: center;
-    
+        display: flex;
+        justify-content: space-around;
+        /* margin: auto; */
+        align-items: center;
+        margin-bottom: 90px;
+
     }
-    .quest1>h1{
+
+    .quest1>h1 {
         font-size: 50px;
+    }
+
+    .cards img {
+        width: 230px;
+    }
+
+    .foot1 {
+        height: 200px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background: linear-gradient(rgb(120, 154, 120), rgb(227, 191, 124));
+        padding-left: 50px;
+        padding-top: 100px;
+    }
+
+    .f2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 </style>
 
 <body>
     <navigation>
+        <img id="imgg" src="https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683_1280.png" alt="">
         <div class="main">
             <div class="nav">
                 <div class="logo">
@@ -229,20 +297,19 @@
                 <div class="options">
                     <!-- <a href="" class="home">Home</a> -->
                     <a href="">About</a>
-                    <a href="">Discover</a>
+                    <a href="discover.html">Discover</a>
                     <a href="">Membership</a>
                     <a href="">login</a>
                     <a href="">Contact </a>
                 </div>
             </div>
             <div class="head">
-                <h1>The best hotel deals <br> in switzerland</h1>
+                <h1>The best hotel deals</h1>
             </div>
             <div class="box">
 
             </div>
         </div>
-
     </navigation>
     <middle>
         <div class="offers">
@@ -258,23 +325,21 @@
             </div>
             <div class="div2">
                 <div class="div3">
-                    <p>For partner hotels,participation in Hotelcard programme is free of charge. <br>In return,they
-                        grant Hotelcard holders up to 50% discount if they <br> have available rooms.</p>
+                    <p><strong> partner hotels,participation in Hotelcard programme is free of charge. <br>In
+                            return,they
+                            grant Hotelcard holders up to 50% discount if they <br> have available rooms.</strong></p>
                 </div>
                 <div class="div4">
-
-
-
                     <div>
-                        <img src="" alt=""><i class="fa-solid fa-hotel"></i>
-                        <h3>Stay in more than 500 hotels <br> with 30-50% discount.</h3>
+                        <img src="" alt=""><i class="fa-solid fa-city fa-beat fa-2xl"></i>
+                        <h3>Stay in more than 500 hotels with 30-50% <br> discount.</h3>
                     </div>
                     <div>
-                        <img src="" alt="">
-                        <h3>From simple Bed & Breakfast <br> to 5*luxury hotel.</h3>
+                        <img src="" alt=""><i class="fa-solid fa-bed fa-beat fa-2xl"></i>
+                        <h3>From simple Bed & Breakfast to 5*luxury<br> hotel.</h3>
                     </div>
                     <div>
-                        <img src="" alt="">
+                        <img src="" alt=""><i class="fa-solid fa-mug-saucer fa-beat fa-2xl"></i>
                         <h3>From A for Ascona to <br> Z for Zermatt.</h3>
                     </div>
                 </div>
@@ -286,7 +351,8 @@
             <h1>Become a member now</h1>
             <div class="cards">
                 <div>
-                    <img src="" alt="">
+                    <img src="https://www.wildapricot.com/wp-content/uploads/2022/10/membership-card-template7498ac018dcf4f96bb2b9a9274607142.png"
+                        alt="">
                     <h3>Trial membership 6 months</h3>
                     <div class="inner">
                         <h3>CHF 79/6 months</h3>
@@ -296,7 +362,8 @@
                     </div>
                 </div>
                 <div>
-                    <img src="" alt="">
+                    <img src="https://static.vecteezy.com/system/resources/previews/003/604/411/non_2x/nfc-card-icon-contactless-payment-pay-cshless-logo-tap-pass-reader-with-hand-open-hotel-door-sensor-lock-isolated-line-on-white-background-vector.jpg"
+                        alt="">
                     <h3>Hotelcard</h3>
                     <div class="inner">
                         <h3>CHF 99/9 months</h3>
@@ -304,7 +371,7 @@
                     </div>
                 </div>
                 <div>
-                    <img src="" alt="">
+                    <img src="https://ak2.picdn.net/shutterstock/videos/18584012/thumb/7.jpg?ip=x480" alt="">
                     <h3>Gift card</h3>
                     <div class="inner">
                         <h3>CHF 79/12 months</h3>
@@ -321,8 +388,7 @@
                 <button>Learn more</button>
             </div>
             <div class="box2">
-                <img src="https://images.ctfassets.net/2sam6k0rncvg/24MznjozCLzpF1qKIIGJbh/7b5218ec6f36e3a17397f28e42c6a5d1/things-to-carry-on-a-road-trip.png"
-                    alt="">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/fbc52262225969.5a89af053bacd.gif" alt="">
             </div>
         </div>
         <div class="questions">
@@ -330,22 +396,47 @@
                 <h1>Frequently asked <br> questions</h1>
             </div>
             <div class="quest2">
-              <a href=""><h2>+ Is Hotelcard a subscription?</h2></a> 
-              <a href=""><h2>+ Can the membership be cancelled at any time?</h2></a> 
-              <a href=""><h2>+ When can i start using Hotelcard?</h2></a> 
-              <a href=""><h2>+ Can i book as often as i like at member-rates?</h2></a> 
+                <a href="">
+                    <h2>+ Is Hotelcard a subscription?</h2>
+                </a>
+                <a href="">
+                    <h2>+ Can the membership be cancelled at any time?</h2>
+                </a>
+                <a href="">
+                    <h2>+ When can i start using Hotelcard?</h2>
+                </a>
+                <a href="">
+                    <h2>+ Can i book as often as i like at member-rates?</h2>
+                </a>
             </div>
         </div>
     </lower>
     <footer>
         <div class="foot1">
+            <div class="fv">
+                <h1>Do you have <br>anymore questions?</h1>
+            </div>
 
-        </div>
-        <div class="foot2">
-            
+            <div class="foot2">
+
+                <div class="f1">
+                    <h2>We would also be happy to advise you by telephone or call.</h2>
+                </div>
+                <div class="f2">
+                    <div class="g1">
+                        <h2>+41(0)800 089 765</h2>
+                    </div>
+                    <div class="g2">
+                        <h2>office@hotelcard.com</h2>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
+
 <script src="https://kit.fontawesome.com/bebb242692.js" crossorigin="anonymous"></script>
-</html>
+
 <script src="index.js"></script>
+
+</html>
