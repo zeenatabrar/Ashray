@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Add these styles to your style.css file */
+
+      /* Slider */
+      .product {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .product-category {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .product-container {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .card {
+        flex: 0 0 auto;
+        width: 80%;
+        margin-right: 20px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-details {
+        padding: 10px;
+      }
+
+      .card h2 {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      .card p {
+        margin: 5px 0;
+      }
+
+      .price {
+        font-weight: bold;
+      }
+
+      .rating {
+        color: #ffa500;
+      }
+
+      /* Navigation Buttons */
+      .pre-btn,
+      .nxt-btn {
+        border: none;
+        width: 10vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          #fff 100%
+        );
+        cursor: pointer;
+        z-index: 8;
+      }
+
+      .pre-btn {
+        left: 0;
+        transform: rotate(180deg);
+      }
+
+      .nxt-btn {
+        right: 0;
+      }
+
+      .pre-btn img,
+      .nxt-btn img {
+        opacity: 0.2;
+      }
+
+      .pre-btn:hover img,
+      .nxt-btn:hover img {
+        opacity: 1;
+      }
+
+      /* Hide horizontal scrollbar */
+      .product-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Media Queries */
+      @media (min-width: 480px) {
+        .card {
+          width: 90%;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .product-container {
+          overflow-x: hidden;
+        }
+
+        .card {
+          width: 300px;
+        }
+      }
+    </style>
+    <title>Hiking Kings</title>
+  </head>
+
+  <body>
+    <section class="product">
+      <h2 class="product-category">Best Selling</h2>
+      <button class="pre-btn"><img src="images/arrow.png" alt="" /></button>
+      <button class="nxt-btn"><img src="images/arrow.png" alt="" /></button>
+      <div class="product-container" id="product-container">
+        <!-- Products will be dynamically added here -->
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const productContainers =
+          document.querySelectorAll(".product-container");
+        const nxtBtns = document.querySelectorAll(".nxt-btn");
+        const preBtns = document.querySelectorAll(".pre-btn");
+
+        productContainers.forEach((item, i) => {
+          let containerDimensions = item.getBoundingClientRect();
+          let containerWidth = containerDimensions.width;
+
+          nxtBtns[i].addEventListener("click", () => {
+            item.scrollLeft += containerWidth;
+          });
+
+          preBtns[i].addEventListener("click", () => {
+            item.scrollLeft -= containerWidth;
+          });
+        });
+
+        fetch("https://hotels-tn92.onrender.com/hotels")
+          .then((response) => response.json())
+          .then((data) => {
+            const productContainer =
+              document.getElementById("product-container");
+
+            // Create slider items
+            data.forEach((hotel) => {
+              var card = document.createElement("div");
+              card.className = "card";
+
+              var image = document.createElement("img");
+              image.src = hotel.image;
+              image.alt = "Hotel Image";
+              card.appendChild(image);
+
+              var details = document.createElement("div");
+              details.className = "card-details";
+              card.appendChild(details);
+
+              var h2 = document.createElement("h2");
+              h2.textContent = hotel.name;
+              details.appendChild(h2);
+
+              var p1 = document.createElement("p");
+              p1.textContent = hotel.location;
+              details.appendChild(p1);
+
+              var p2 = document.createElement("p");
+              p2.textContent = hotel.description;
+              details.appendChild(p2);
+
+              var p3 = document.createElement("p");
+              p3.className = "price";
+              p3.textContent = "Price: $" + hotel.price;
+              details.appendChild(p3);
+
+              var p4 = document.createElement("p");
+              p4.className = "rating";
+              p4.textContent = "Rating: " + hotel.rating;
+              details.appendChild(p4);
+
+              productContainer.appendChild(card);
+            });
+          })
+          .catch((error) => {
+            console.error("Error fetching hotel data:", error);
+          });
+      });
+    </script>
+  </body>
+</html>
