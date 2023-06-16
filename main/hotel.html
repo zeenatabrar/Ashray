@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Hotel</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
     <style>
       .topColor {
         background-color: #fff;
@@ -30,12 +34,21 @@
         width: 90%;
         padding: 25px;
         margin: auto;
-        color: teal;
+        /* color: teal; */
         background-color: #fff;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
           rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
       }
-
+      #conty > div > h1 {
+        color: teal;
+        font-family: "Sofia", sans-serif;
+      }
+      #conty > div > h2 {
+        color: cadetblue;
+      }
+      #conty > div > p {
+        font-size: 20px;
+      }
       img {
         width: 100%;
         margin: auto;
@@ -43,7 +56,7 @@
 
       #book {
         width: 30%;
-        height: 550px;
+        height: 590px;
         padding: 20px;
         text-align: center;
         background-color: #fff;
@@ -75,7 +88,9 @@
       #detail > select {
         padding: 10px;
       }
-
+      a {
+        text-decoration: none;
+      }
       #bookBtn {
         padding: 10px;
         display: block;
@@ -96,51 +111,30 @@
       <div id="book">
         <h2>Book your hotel here</h2>
         <div id="detail">
-          <label for="">Select Your City</label>
+          <label for="">Enter your name</label>
           <br />
-          <select name="" id="city">
-            <option value="">cities</option>
-            <option value="Agartala, Tripura, India">
-              Agartala, Tripura, India
-            </option>
-            <option value="Bengaluru, Karnataka, India">
-              Bengaluru, Karnataka, India
-            </option>
-            <option value="Bhopal, Madhya Pradesh, India">
-              Bhopal, Madhya Pradesh, India
-            </option>
-            <option value="Chandigarh, Chandigarh, India">
-              Chandigarh, Chandigarh, India
-            </option>
-            <option value="Cochin, Kerala, India">Cochin, Kerala, India</option>
-            <option value="Delhi, NCT of Delhi, India">
-              Delhi, NCT of Delhi, India
-            </option>
-            <option value="Indore, Madhya Pradesh, India">
-              Indore, Madhya Pradesh, India
-            </option>
-            <option value="Jaipur, Rajasthan, India">
-              Jaipur, Rajasthan, India
-            </option>
-            <option value="Mumbai, Maharashtra, India">
-              Mumbai, Maharashtra, India
-            </option>
-            <option value="Dehradun, Uttarakhand, India">
-              Dehradun, Uttarakhand, India
-            </option>
-          </select>
+          <input type="text" id="Name" placeholder="ENTER NAME" />
           <br />
-          <label for="">Start Date</label>
+          <label for="">Enter your contact no.</label>
+          <br />
+          <input type="number" name="" id="Mobile" placeholder="CONTACT NO." />
+          <br />
+          <label for="">Date of Arrival</label>
           <br />
           <input type="date" name="start" id="startDate" />
           <br />
-          <label for="">End Date</label>
+          <label for="">Check-Out Date</label>
           <br />
           <input type="date" name="end" id="endDate" />
           <br />
           <label for="">Number Of Persons</label>
           <br />
-          <input type="number" name="" id="NoOfperson" />
+          <input
+            type="number"
+            name=""
+            id="NoOfperson"
+            placeholder="NO OF PERSON"
+          />
         </div>
         <button id="bookBtn">BOOK NOW</button>
       </div>
