@@ -45,9 +45,9 @@ function createcard(item){
   let cardbody = document.createElement("div")
   cardbody.className = "card-body"
 
-  let h4 = document.createElement("h4")
-  h4.className = "card-title"
-  h4.innerText = item.description;
+//   let h4 = document.createElement("h4")
+//   h4.className = "card-title"
+//   h4.innerText = item.description;
 
   let p2 = document.createElement("p")
   p2.className = "card-category"
@@ -62,7 +62,7 @@ function createcard(item){
   p4.className = "card-price"
   p4.innerText = item.rating;
 
-  cardbody.append(h4,p2,p3,p4)
+  cardbody.append(p2,p3,p4)
   card.append(imgdiv,cardbody)
   return card;
 }
