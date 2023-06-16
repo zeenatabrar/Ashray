@@ -21,33 +21,48 @@ des.textContent = hotel[0].description;
 imgdiv.append(backImage, place, position, des);
 conty.append(imgdiv);
 
-let from = document.getElementById("city");
-let startDate = document.getElementById("startDate");
-let endDate = document.getElementById("endDate");
+let Name = document.getElementById("Name");
+let mob = document.getElementById("Mobile");
+let ArrDate = document.getElementById("startDate");
+let checkDate = document.getElementById("endDate");
 let NoOfPerson = document.getElementById("NoOfperson");
 
 let bookBtn = document.getElementById("bookBtn");
 
 bookBtn.addEventListener("click", function () {
-  alert("Your booking is completed.Thank You");
-
- fetch("https://hotels-tn92.onrender.com/bookings", {
-    method: "POST",
-    body: JSON.stringify({
-      name: `${place.innerText}`,
-      location: `${position.innerText}`,
-      image: `${hotel[0].image}`,
-      city: `${from.value}`,
-      start: `${startDate.value}`,
-      end: `${endDate.value}`,
-      persons: `${NoOfPerson.value}`,
-      price: Number(hotel[0].price),
-      amount: `${Number(paise) * Number(NoOfPerson.value) * 10}`,
-    }),
-    headers: {
-      "Content-type": "application/json",
-    },
-  });
-  console.log(body);
-  location.replace("./discover.html");
+  if (
+    Name.value == "" ||
+    mob.value == "" ||
+    ArrDate.value == "" ||
+    checkDate.value == "" ||
+    NoOfPerson.value == ""
+  ) {
+    alert("Please fill all the details.");
+  } else {
+    alert("Your booking is completed.Thank You");
+    console.log("press");
+    fetch("https://hotels-tn92.onrender.com/bookings", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({
+        name: `${place.innerText}`,
+        location: `${position.innerText}`,
+        image: `${hotel[0].image}`,
+        personName: `${Name.value}`,
+        arrival: `${ArrDate.value}`,
+        checkOut: `${checkDate.value}`,
+        people: `${NoOfPerson.value}`,
+        price: Number(hotel[0].price),
+        amount: `${Number(paise) * Number(NoOfPerson.value) * 10}`,
+      }),
+    });
+    setTimeout(redirection, 1000);
+    // console
+    // location.replace("./index.html");
+  }
 });
+function redirection() {
+  location.replace("./index.html");
+}
