@@ -66,3 +66,11 @@ function createcard(item){
   card.append(imgdiv,cardbody)
   return card;
 }
+
+
+// login & logout
+var sc = localStorage.getItem("code");
+if (sc == "secret") {
+} else {
+  window.location.href = "login.html";
+}
