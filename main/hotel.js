@@ -31,7 +31,7 @@ let bookBtn = document.getElementById("bookBtn");
 bookBtn.addEventListener("click", function () {
   alert("Your booking is completed.Thank You");
 
-  fetch("http://localhost:9971/bookPlaces", {
+ fetch("https://hotels-tn92.onrender.com/bookings", {
     method: "POST",
     body: JSON.stringify({
       name: `${place.innerText}`,
