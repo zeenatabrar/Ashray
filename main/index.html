@@ -113,11 +113,16 @@
    
 
     .middle2 {
+        border-radius: 20px;
+        padding: 50px;
+        margin: auto;
+        margin-top: 50px;
         display: grid;
-        margin-left: 50px;
-        width: 90%;
+        /* margin-left: 50px; */
+        width: 80%;
         grid-template-columns: repeat(2, 1fr);
         /* gap: 20px; */
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
     .div4 {
@@ -163,13 +168,14 @@
     }
 
     .become_member {
+           margin: auto; 
         margin-top: 70px;
         padding-top: 50px;
         background: linear-gradient(pink, rgb(207, 165, 87));
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        ;
-        width: 80%;
-        margin-left: 150px;
+      border-radius: 20px;
+        width: 87%;
+        /* margin-left: 150px; */
     }
 
     .cards h3 {
@@ -201,11 +207,12 @@
     .flexing {
 
 
-        width: 100%;
+        width: 80%;
+       
         padding-top: 100px;
         display: flex;
         /* gap: 150px; */
-        justify-content: center;
+        justify-content:center;
         align-items: center;
         margin: auto;
 
@@ -230,7 +237,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         ;
         border-radius: 20px;
-        background-color: grey;
+        background-color:rgb(240, 240, 240);
         width: 40%;
         height: 440px;
         text-align: center;
@@ -267,10 +274,10 @@
     }
 
     .foot1 {
-        height: 200px;
+        height: 150px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        background: linear-gradient(rgb(120, 154, 120), rgb(227, 191, 124));
+        background-color: rgb(46, 62, 62);
         padding-left: 50px;
         padding-top: 100px;
     }
@@ -283,6 +290,142 @@
         height: 600px;
         opacity: 0.8;
     }
+    .logo img{
+        width: 50%;
+    }
+    .logo{
+        padding-top: 30px;
+    }
+      /* Add these styles to your style.css file */
+
+      /* Slider */
+      .product {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .product-category {
+        text-align: center;
+        font-size: 44px;
+        margin-bottom: 70px;
+      }
+
+      .product-container {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .card {
+        flex: 0 0 auto;
+        width: 80%;
+        margin-right: 20px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-details {
+        padding: 10px;
+      }
+
+      .card h2 {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      .card p {
+        margin: 5px 0;
+      }
+
+      .price {
+        font-weight: bold;
+      }
+
+      .rating {
+        color: #ffa500;
+      }
+
+      /* Navigation Buttons */
+      .pre-btn,
+      .nxt-btn {
+        border: none;
+        width: 8vw;
+        /* height: 100%; */
+        height: 100px;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+        white 100%
+        );
+        cursor: pointer;
+        z-index: 8;
+      }
+
+      .pre-btn {
+        margin-top: 950px;
+        left: 0;
+        transform: rotate(180deg);
+       
+      }
+
+      .nxt-btn {
+        margin-top: 950px;
+        right: 0;
+      
+      }
+
+      .pre-btn img,
+      .nxt-btn img {
+        /* opacity: 0.2; */
+        width: 25%;
+      }
+
+      .pre-btn:hover img,
+      .nxt-btn:hover img {
+        /* opacity: 1; */
+      }
+
+      /* Hide horizontal scrollbar */
+      .product-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Media Queries */
+      @media (min-width: 480px) {
+        .card {
+          width: 90%;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .product-container {
+          overflow-x: hidden;
+        }
+
+        .card {
+          width: 300px;
+        }
+      }
+
 </style>
 
 <body>
@@ -293,7 +436,7 @@
                 <div class="logo">
                     <div>
                         <a href="./index.html">
-                            <h1>TUBIK</h1>
+                           <img src="./logo-no-background.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -316,9 +459,17 @@
     </navigation>
     <middle>
         <div class="offers">
-            <h1>Top Offers</h1>
+            <!-- <h1>Top Offers</h1> -->
             <div class="hotels" id="hotels">
                 <!-- append hotels here -->
+                <section class="product">
+                    <h1 class="product-category">Top Offers</h1>
+                    <button class="pre-btn"><img src="./arrow.png" alt="" /></button>
+                    <button class="nxt-btn"><img src="./arrow.png" alt="" /></button>
+                    <div class="product-container" id="product-container">
+                      <!-- Products will be dynamically added here -->
+                    </div>
+                  </section>
             </div>
         </div>
         <div class="middle2">
@@ -352,7 +503,7 @@
     <lower>
         <div class="become_member">
 
-            
+
             <h1>Become a member now</h1>
             <div class="cards">
                 <div>
