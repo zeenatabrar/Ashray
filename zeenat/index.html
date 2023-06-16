@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTEL-WEBSITE</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        background: linear-gradient(rgb(224, 171, 180), rgb(247, 217, 163), rgb(216, 186, 186));
+
+    }
+
+    .main {
+        position: relative;
+        width: 100%;
+        height: 650px;
+
+        /* background: linear-gradient(124deg, rgb(49, 89, 97) 35%, rgb(107, 140, 188) 100%); */
+        /* background-image: url("https://cdn.dribbble.com/users/6498639/screenshots/15138706/media/0262f2a4841a14755bd96261e11b6334.gif"); */
+        background-repeat: no-repeat;
+    }
+
+    #imgg {
+        /* display: none; */
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .nav {
+        /* background: linear-gradient(124deg, rgb(49, 89, 97) 35%, rgb(107, 140, 188) 100%); */
+        /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgzO3FOjocAn7oJNEHHwlMDYZeHDAliU6W_A&usqp=CAU"); */
+        width: 100%;
+        /* height: 750px; */
+        /* background-color: white; */
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+        /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+        /* position: fixed; */
+    }
+
+    .logo h1 {
+        color: black;
+        font-weight: bolder;
+        /* background-color: #7B1FA2; */
+        padding-left: 35px;
+        font-size: 50px;
+
+    }
+
+    .logo h1:hover {
+        color: white;
+    }
+
+    .options {
+        margin-right: 90px;
+    }
+
+    .nav>.options {
+        width: 700px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 30px;
+        padding-top: 50px;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+        
+        /* /* margin-right: 30px; */
+    }
+
+    .nav a:hover {
+        color:rgb(228, 43, 43);
+    }
+
+    
+
+    .logo {
+        width: 200px;
+        height: 80px;
+
+        margin-left: 50px;
+        /* background: rgb(195, 79, 232); */
+        /* background: linear-gradient(124deg, rgba(195, 79, 232, 1) 35%, rgba(51, 122, 229, 1) 100%); */
+
+    }
+
+    .hotels img {
+        width: 350px;
+    }
+
+    /* .hotels div1{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} */
+
+    .head>h1 {
+        color:black;
+        text-align: center;
+        padding-top: 200px;
+        font-size: 70px;
+    }
+
+   
+
+    .middle2 {
+        display: grid;
+        margin-left: 50px;
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 20px; */
+    }
+
+    .div4 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .div1>button {
+        width: 200px;
+        border-radius: 20px;
+        background-color: red;
+        color: white;
+        border: 2px solid red;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .offers>h1 {
+        margin-left: 50px;
+        /* margin-top: 550px; */
+    }
+
+    .div1>h1 {
+        font-size: 50px;
+    }
+
+    .div3>p {
+        font-size: 20px;
+        line-height: 40px;
+        padding-bottom: 30px;
+    }
+
+    .cards {
+        display: flex;
+
+        /* gap: 90px; */
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+
+    }
+
+    .become_member {
+        margin-top: 70px;
+        padding-top: 50px;
+        background: linear-gradient(pink, rgb(207, 165, 87));
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        ;
+        width: 80%;
+        margin-left: 150px;
+    }
+
+    .cards h3 {
+        text-align: center;
+    }
+
+    .become_member>h1 {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+
+    }
+
+    .inner>button {
+        width: 60px;
+        height: 20px;
+        margin-top: 20px;
+        border-radius: 20px;
+        border: 2px solid red;
+        background-color: red;
+        color: white;
+    }
+
+    .flexing {
+
+
+        width: 100%;
+        padding-top: 100px;
+        display: flex;
+        /* gap: 150px; */
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+
+    }
+
+    .box2>img {
+        width: 100%;
+    }
+
+    .box1>button {
+        width: 100px;
+        height: 40px;
+        margin-top: 20px;
+        border-radius: 20px;
+        border: 2px solid red;
+        background-color: red;
+        color: white;
+    }
+
+    .box1 {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        ;
+        border-radius: 20px;
+        background-color: grey;
+        width: 40%;
+        height: 440px;
+        text-align: center;
+        margin: auto;
+        /* padding-top: 100px; */
+    }
+
+    .box1>h1 {
+        padding-top: 50px;
+    }
+
+    .quest2 a {
+        text-decoration: none;
+        color: black;
+    }
+
+
+    .questions {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-around;
+        /* margin: auto; */
+        align-items: center;
+        margin-bottom: 90px;
+
+    }
+
+    .quest1>h1 {
+        font-size: 50px;
+    }
+
+    .cards img {
+        width: 230px;
+    }
+
+    .foot1 {
+        height: 200px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background: linear-gradient(rgb(120, 154, 120), rgb(227, 191, 124));
+        padding-left: 50px;
+        padding-top: 100px;
+    }
+
+    .f2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #imgg{
+        height: 600px;
+        opacity: 0.8;
+    }
+</style>
+
+<body>
+    <navigation>
+        <img id="imgg" src="https://cdn.businesstraveller.com/wp-content/uploads/2023/03/Entrance.-credit-Four-Seasons-copy.jpg" alt="">
+        <div class="main">
+            <div class="nav">
+                <div class="logo">
+                    <div>
+                        <a href="index.html">
+                            <h1>TUBIK</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="options">
+                    <!-- <a href="" class="home">Home</a> -->
+                    <a href="">About</a>
+                    <a href="discover.html">Discover</a>
+                    <a href="">Membership</a>
+                    <a href="">login</a>
+                    <a href="">Contact </a>
+                </div>
+            </div>
+            <div class="head">
+                <h1>The best hotel deals <br> In Switzerland</h1>
+            </div>
+            <div class="box">
+
+            </div>
+        </div>
+    </navigation>
+    <middle>
+        <div class="offers">
+            <h1>Top Offers</h1>
+            <div class="hotels" id="hotels">
+                <!-- append hotels here -->
+            </div>
+        </div>
+        <div class="middle2">
+            <div class="div1">
+                <h1>How HotelCard <br>works</h1>
+                <button>Learn more</button>
+            </div>
+            <div class="div2">
+                <div class="div3">
+                    <p><strong> partner hotels,participation in Hotelcard programme is free of charge. <br>In
+                            return,they
+                            grant Hotelcard holders up to 50% discount if they <br> have available rooms.</strong></p>
+                </div>
+                <div class="div4">
+                    <div>
+                        <img src="" alt=""><i class="fa-solid fa-city fa-beat fa-2xl"></i>
+                        <h3>Stay in more than 500 hotels with 30-50% <br> discount.</h3>
+                    </div>
+                    <div>
+                        <img src="" alt=""><i class="fa-solid fa-bed fa-beat fa-2xl"></i>
+                        <h3>From simple Bed & Breakfast to 5*luxury<br> hotel.</h3>
+                    </div>
+                    <div>
+                        <img src="" alt=""><i class="fa-solid fa-mug-saucer fa-beat fa-2xl"></i>
+                        <h3>From A for Ascona to <br> Z for Zermatt.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </middle>
+    <lower>
+        <div class="become_member">
+            <h1>Become a member now</h1>
+            <div class="cards">
+                <div>
+                    <img src="https://www.wildapricot.com/wp-content/uploads/2022/10/membership-card-template7498ac018dcf4f96bb2b9a9274607142.png"
+                        alt="">
+                    <h3>Trial membership 6 months</h3>
+                    <div class="inner">
+                        <h3>CHF 79/6 months</h3>
+
+
+                        <button>Buy</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://static.vecteezy.com/system/resources/previews/003/604/411/non_2x/nfc-card-icon-contactless-payment-pay-cshless-logo-tap-pass-reader-with-hand-open-hotel-door-sensor-lock-isolated-line-on-white-background-vector.jpg"
+                        alt="">
+                    <h3>Hotelcard</h3>
+                    <div class="inner">
+                        <h3>CHF 99/9 months</h3>
+                        <button>Buy</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://ak2.picdn.net/shutterstock/videos/18584012/thumb/7.jpg?ip=x480" alt="">
+                    <h3>Gift card</h3>
+                    <div class="inner">
+                        <h3>CHF 79/12 months</h3>
+                        <button>Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flexing">
+            <div class="box1">
+                <h1>Simple.</h1>
+                <h1>Honest.</h1>
+                <h1>Win-win for all.</h1>
+                <button>Learn more</button>
+            </div>
+            <div class="box2">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/fbc52262225969.5a89af053bacd.gif" alt="">
+            </div>
+        </div>
+        <div class="questions">
+            <div class="quest1">
+                <h1>Frequently asked <br> questions</h1>
+            </div>
+            <div class="quest2">
+                <a href="">
+                    <h2>+ Is Hotelcard a subscription?</h2>
+                </a>
+                <a href="">
+                    <h2>+ Can the membership be cancelled at any time?</h2>
+                </a>
+                <a href="">
+                    <h2>+ When can i start using Hotelcard?</h2>
+                </a>
+                <a href="">
+                    <h2>+ Can i book as often as i like at member-rates?</h2>
+                </a>
+            </div>
+        </div>
+    </lower>
+    <footer>
+        <div class="foot1">
+            <div class="fv">
+                <h1>Do you have <br>anymore questions?</h1>
+            </div>
+
+            <div class="foot2">
+
+                <div class="f1">
+                    <h2>We would also be happy to advise you by telephone or call.</h2>
+                </div>
+                <div class="f2">
+                    <div class="g1">
+                        <h2>+41(0)800 089 765</h2>
+                    </div>
+                    <div class="g2">
+                        <h2>office@hotelcard.com</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://kit.fontawesome.com/bebb242692.js" crossorigin="anonymous"></script>
+
+<script src="index.js"></script>
+
+</html>
