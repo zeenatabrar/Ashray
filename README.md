@@ -20,6 +20,7 @@ The Hotel Booking Website provides a user-friendly interface with a focus on usa
 - Back-end: Node.js
 - API Integration: Hotel management system API for real-time data
 
+![alt text](https://camo.githubusercontent.com/4d13bf1cb702ddb551e9c3206263ae73d9f75b38dfd9abdc5d89966282b89ffd/68747470733a2f2f736b696c6c732e7468696a732e67672f69636f6e733f693d68746d6c2c6373732c6a732c626f6f747374726170)
 
 ## Table of Contents
 
