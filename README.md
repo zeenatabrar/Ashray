@@ -1,5 +1,5 @@
-![alt text](<img src="https://i.postimg.cc/KvNq6Xjb/logo-no-background.png" alt="image" width="300" height="300">
-) 
+![alt text](https://i.postimg.cc/KvNq6Xjb/logo-no-background.png){width=300px}
+
 # Hotel Booking Website
 
 A modern and intuitive hotel booking website that allows users to search for hotels, view detailed information, and make bookings seamlessly.
