@@ -5,14 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOTEL-WEBSITE</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
 </head>
+
 <style>
     body {
         margin: 0px;
         padding: 0px;
         box-sizing: border-box;
         /* background: linear-gradient(rgb(224, 171, 180), rgb(247, 217, 163), rgb(216, 186, 186)); */
-
+        
     }
 
     .main {
@@ -37,12 +42,15 @@
         /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgzO3FOjocAn7oJNEHHwlMDYZeHDAliU6W_A&usqp=CAU"); */
         width: 100%;
         /* height: 750px; */
-        /* background-color: white; */
+        background-color: #EDE7F6;
+       
+        top: 0px;
         display: flex;
         justify-content: space-between;
         /* align-items: center; */
         /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-        /* position: fixed; */
+        position: fixed;
+        font-family: "Sofia", sans-serif;
     }
 
     .logo h1 {
@@ -75,15 +83,15 @@
         text-decoration: none;
         color: black;
         font-weight: bolder;
-        
+
         /* /* margin-right: 30px; */
     }
 
     .nav a:hover {
-        color:rgb(228, 43, 43);
+        color: rgb(228, 43, 43);
     }
 
-    
+
 
     .logo {
         width: 200px;
@@ -104,13 +112,13 @@
 } */
 
     .head>h1 {
-        color:black;
+        color: black;
         text-align: center;
         padding-top: 200px;
         font-size: 70px;
     }
 
-   
+
 
     .middle2 {
         border-radius: 20px;
@@ -168,12 +176,12 @@
     }
 
     .become_member {
-           margin: auto; 
+        margin: auto;
         margin-top: 70px;
         padding-top: 50px;
         background: linear-gradient(pink, rgb(207, 165, 87));
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      border-radius: 20px;
+        border-radius: 20px;
         width: 87%;
         /* margin-left: 150px; */
     }
@@ -208,11 +216,11 @@
 
 
         width: 80%;
-       
+
         padding-top: 100px;
         display: flex;
         /* gap: 150px; */
-        justify-content:center;
+        justify-content: center;
         align-items: center;
         margin: auto;
 
@@ -237,7 +245,7 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         ;
         border-radius: 20px;
-        background-color:rgb(240, 240, 240);
+        background-color: rgb(240, 240, 240);
         width: 40%;
         height: 440px;
         text-align: center;
@@ -277,48 +285,60 @@
         height: 150px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        background-color: rgb(46, 62, 62);
+        background-color: black;
         padding-left: 50px;
         padding-top: 100px;
+    }
+
+    .foot2 {
+        color: white;
     }
 
     .f2 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    #imgg{
+
+    #imgg {
         height: 600px;
         opacity: 0.8;
     }
-    .logo img{
+
+    .logo img {
         width: 50%;
     }
-    .logo{
+
+    .logo {
         padding-top: 30px;
     }
-      /* Add these styles to your style.css file */
 
-      /* Slider */
-      .product {
+    /* Add these styles to your style.css file */
+
+    /* Slider */
+    .product {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
-      }
+    }
 
-      .product-category {
+    .product-category {
         text-align: center;
         font-size: 44px;
         margin-bottom: 70px;
-      }
+    }
 
-      .product-container {
+    .product-container {
         display: flex;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-      }
+    }
 
-      .card {
+    .fv {
+        color: white;
+    }
+
+    .card {
         flex: 0 0 auto;
         width: 80%;
         margin-right: 20px;
@@ -326,117 +346,113 @@
         border-radius: 8px;
         overflow: hidden;
         transition: transform 0.3s;
-      }
+    }
 
-      .card:hover {
+    .card:hover {
         transform: scale(1.05);
-      }
+    }
 
-      .card img {
+    .card img {
         width: 100%;
         height: 200px;
         object-fit: cover;
-      }
+    }
 
-      .card-details {
+    .card-details {
         padding: 10px;
-      }
+    }
 
-      .card h2 {
+    .card h2 {
         font-size: 20px;
         margin: 10px 0;
-      }
+    }
 
-      .card p {
+    .card p {
         margin: 5px 0;
-      }
+    }
 
-      .price {
+    .price {
         font-weight: bold;
-      }
+    }
 
-      .rating {
+    .rating {
         color: #ffa500;
-      }
+    }
 
-      /* Navigation Buttons */
-      .pre-btn,
-      .nxt-btn {
+    /* Navigation Buttons */
+    .pre-btn,
+    .nxt-btn {
         border: none;
         width: 8vw;
         /* height: 100%; */
         height: 100px;
-        position: absolute;
+        position:absolute;
         top: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0) 0%,
-        white 100%
-        );
+        background: linear-gradient(90deg,
+                rgba(255, 255, 255, 0) 0%,
+                white 100%);
         cursor: pointer;
         z-index: 8;
-      }
+    }
 
-      .pre-btn {
+    .pre-btn {
         margin-top: 950px;
         left: 0;
         transform: rotate(180deg);
-       
-      }
 
-      .nxt-btn {
+    }
+
+    .nxt-btn {
         margin-top: 950px;
         right: 0;
-      
-      }
 
-      .pre-btn img,
-      .nxt-btn img {
+    }
+
+    .pre-btn img,
+    .nxt-btn img {
         /* opacity: 0.2; */
         width: 25%;
-      }
+    }
 
-      .pre-btn:hover img,
-      .nxt-btn:hover img {
-        /* opacity: 1; */
-      }
+    
 
-      /* Hide horizontal scrollbar */
-      .product-container::-webkit-scrollbar {
+    /* Hide horizontal scrollbar */
+    .product-container::-webkit-scrollbar {
         display: none;
-      }
+    }
 
-      /* Media Queries */
-      @media (min-width: 480px) {
+    /* Media Queries */
+    @media (min-width: 480px) {
         .card {
-          width: 90%;
+            width: 90%;
         }
-      }
+    }
 
-      @media (min-width: 768px) {
+    @media (min-width: 768px) {
         .product-container {
-          overflow-x: hidden;
+            overflow-x: hidden;
         }
 
         .card {
-          width: 300px;
+            width: 300px;
         }
-      }
-
+    }
 </style>
 
 <body>
     <navigation>
-        <img id="imgg" src="https://cdn.businesstraveller.com/wp-content/uploads/2023/03/Entrance.-credit-Four-Seasons-copy.jpg" alt="">
+        <img id="imgg"
+            src="https://cdn.businesstraveller.com/wp-content/uploads/2023/03/Entrance.-credit-Four-Seasons-copy.jpg"
+            alt="">
         <div class="main">
             <div class="nav">
                 <div class="logo">
                     <div>
                         <a href="./index.html">
-                           <img src="./logo-no-background.png" alt="">
+                            <img src="./logo-no-background.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -446,11 +462,11 @@
                     <a href="./discover.html">Discover</a>
                     <a href="">Membership</a>
                     <a href="./login.html">Logout</a>
-                    <a href="">Contact </a>
+                    <a href="./ContactUs.html">Contact </a>
                 </div>
             </div>
             <div class="head">
-                <h1>The best hotel deals <br> In Switzerland</h1>
+                <h1>The Best Hotel Deals <br>Near You</h1>
             </div>
             <div class="box">
 
@@ -467,9 +483,9 @@
                     <button class="pre-btn"><img src="./arrow.png" alt="" /></button>
                     <button class="nxt-btn"><img src="./arrow.png" alt="" /></button>
                     <div class="product-container" id="product-container">
-                      <!-- Products will be dynamically added here -->
+                        <!-- Products will be dynamically added here -->
                     </div>
-                  </section>
+                </section>
             </div>
         </div>
         <div class="middle2">
