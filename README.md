@@ -1,4 +1,4 @@
-![alt text](https://i.postimg.cc/KvNq6Xjb/logo-no-background.png){width=300px}
+
 
 # Hotel Booking Website
 
