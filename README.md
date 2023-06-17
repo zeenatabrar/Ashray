@@ -1,4 +1,4 @@
-[![logo-no-background.png](https://ibb.co/BgFcngX)
+![logo-no-background.png](https://ibb.co/BgFcngX)
 # Hotel Booking Website
 
 A modern and intuitive hotel booking website that allows users to search for hotels, view detailed information, and make bookings seamlessly.
