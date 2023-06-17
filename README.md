@@ -25,6 +25,21 @@ The Hotel Booking Website provides a user-friendly interface with a focus on usa
 
 ![alt text](https://camo.githubusercontent.com/4d13bf1cb702ddb551e9c3206263ae73d9f75b38dfd9abdc5d89966282b89ffd/68747470733a2f2f736b696c6c732e7468696a732e67672f69636f6e733f693d68746d6c2c6373732c6a732c626f6f747374726170)
 
+## BACKENED API
+
+The backend api server serves as a gateway between the frontend and the database, manipluating data through transaction queries and mongo aggregations to return the desired result that the frontend requests as well as broadcasting live updates across its socket connections. Because the backend server has to be able to serve different hotels each with different room numbers and their own reservations, a HotelID query string is used to differentiate API requests.
+
+All backend api requests go through /api route where an express router autenticates the request and sends the it to the matching router. A hotel check middleware also intercepts the request, obtains the HotelID of the request and stores it in a Conductor for it to use to run commands that execute the business logic.
+
+All login requests go through /user route where an express router directs login and logout requests to their matching router as well as join or leave socket rooms accordingly.
+
+The backend is currently encapsulated into three layers of logic
+
+- Controller: handles all API routes
+- Services: business logic
+- Date-Access: queries for databases with an OO approach to preserve encapsulation and resuse objects through JS prototypical inheritance
+- API is working on JSON server
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -52,4 +67,9 @@ Open your web browser and visit `http://localhost:3000` to access the hotel book
 
 This project is licensed under the [ASHRAY] LICENSE.
 
+## Contributing
 
+1. Zeenat Abrar (Team Lead)
+2. Mohammed Rafique (Admin site)
+3. Narendra Patel (API site)
+4. Subhash Rawat (Page development)
