@@ -16,13 +16,10 @@ The Hotel Booking Website provides a user-friendly interface with a focus on usa
 
 ## Technologies Used
 
-- Front-end: HTML, CSS, JavaScript, React.js
-- Back-end: Node.js, Express.js
-- Database: MySQL, MongoDB
-- Authentication: JSON Web Tokens (JWT)
-- Payment Gateway Integration: Stripe
+- Front-end: HTML, CSS, JavaScript
+- Back-end: Node.js
 - API Integration: Hotel management system API for real-time data
-- Deployment: AWS, Heroku
+
 
 ## Table of Contents
 
