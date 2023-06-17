@@ -19,20 +19,51 @@
         color: #292828;
       }
 
-      .nav-item:hover {
+      /* .nav-item:hover {
         border-bottom: 2px solid #f4a424;
-      }
+      } */
 
-      .nav-link:focus,
+      /* .nav-link:focus,
       .nav-link:hover {
         color: #242222;
-      }
+      } */
 
       #box {
         display: flex;
         width: 100%;
       }
+      .nav > .options {
+        width: 700px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 30px;
+        padding-top: 50px;
+      }
+      .nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      /* .logo {
+        width: 200px;
+        height: 80px;
+        margin-left: 50px;
+      } */
+      .logo img {
+        width: 150px;
+      }
+      .nav a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+        font-family: "Sofia", sans-serif;
+        /* /* margin-right: 30px; */
+      }
 
+      .nav a:hover {
+        color: rgb(228, 43, 43);
+      }
       #filter {
         background-color: white;
         width: 20%;
@@ -197,6 +228,26 @@
           margin: auto;
         }
       }
+      /* .nav > .options {
+        width: 700px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 30px;
+        padding-top: 50px;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+
+        /* /* margin-right: 30px; */
+      /* } */
+
+      /* .nav a:hover {
+        color: rgb(228, 43, 43);
+      } */
     </style>
   </head>
 
@@ -213,6 +264,23 @@
 </a> -->
 
   <body>
+    <div class="nav">
+      <div class="logo">
+        <div>
+          <a href="./index.html">
+            <img src="./logo-no-background.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="options">
+        <!-- <a href="" class="home">Home</a> -->
+        <a href="">About</a>
+        <a href="./discover.html">Discover</a>
+        <a href="">Membership</a>
+        <a href="./login.html">Logout</a>
+        <a href="">Contact </a>
+      </div>
+    </div>
     <div id="travelImg">
       <img src="./intro-1656331262.jpg" alt="" />
       <h1>Find your second home here</h1>
