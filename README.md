@@ -61,15 +61,15 @@ Open your web browser and visit `http://localhost:3000` to access the hotel book
 6. Manage your bookings, view your booking history, and save favorite hotels in your user profile.
 7. Update personal information, change passwords, and customize preferences for a tailored experience.
 
-
-
-## License
-
-This project is licensed under the [ASHRAY] LICENSE.
-
 ## Contributing
 
 1. Zeenat Abrar (Team Lead)
 2. Mohammed Rafique (Admin site)
 3. Narendra Patel (API site)
 4. Subhash Rawat (Page development)
+
+## License
+
+This project is licensed under the [ASHRAY] LICENSE.
+
+
