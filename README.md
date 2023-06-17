@@ -50,6 +50,6 @@ Open your web browser and visit `http://localhost:3000` to access the hotel book
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [ASHRAY] LICENSE.
 
 
