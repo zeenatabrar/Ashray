@@ -9,25 +9,60 @@
       href="https://fonts.googleapis.com/css?family=Sofia"
     />
     <style>
-      .topColor {
-        background-color: #fff;
-        color: #000;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      /* ********************navbar css********************** */
+      .nav {
+        /* border: 2px solid green; */
+        width: 100%;
+        background-color: #ede7f6;
+        height: 100px;
+        top: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        font-family: "Sofia", sans-serif;
       }
 
-      .topColor a {
-        color: #292828;
+      .options {
+        /* border: 2px solid red; */
+        margin-right: 90px;
+        width: 40%;
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 30px;
+        /* padding-top: 50px; */
       }
 
-      .nav-item:hover {
-        border-bottom: 2px solid #f4a424;
+      .options a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
       }
 
-      .nav-link:focus,
-      .nav-link:hover {
-        color: #242222;
+      .options a:hover {
+        color: rgb(228, 43, 43);
+      }
+      /* .logo {
+        /* border: 1px solid red;
+        width: 10%; */
+
+      /* margin-right: 100px; */
+      /* } */
+      .logo img {
+        width: 120px;
+        /* margin: auto;
+        margin-right: 100px; */
+        /* border: 1px solid green; */
       }
 
+      /* ***********************navbar css************************ */
+      body {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
       #box {
         display: flex;
         width: 100%;
@@ -164,7 +199,7 @@
         background-color: white;
       }
 
-      @media screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      @media screen and (max-width: 480px) {
         #box {
           display: flex;
           width: 100%;
@@ -214,6 +249,20 @@
 </a> -->
 
   <body>
+    <div class="nav">
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./logo-no-background.png" alt="" />
+        </a>
+      </div>
+      <div class="options">
+        <a href="">About</a>
+        <a href="./discover.html">Discover</a>
+        <a href="">Membership</a>
+        <a href="./login.html">Logout</a>
+        <a href="./ContactUs.html">Contact </a>
+      </div>
+    </div>
     <div id="travelImg">
       <img src="./artfox-photography-_GaU6hdgRFs-unsplash.jpg" alt="" />
       <h1>Find your second home here</h1>

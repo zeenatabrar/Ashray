@@ -11,23 +11,50 @@
       href="https://fonts.googleapis.com/css?family=Sofia"
     />
     <style>
-      .topColor {
-        background-color: #fff;
-        color: #000;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      /* ********************navbar css********************** */
+      .nav {
+        /* border: 2px solid green; */
+        width: 100%;
+        background-color: #ede7f6;
+        height: 100px;
+        top: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        font-family: "Sofia", sans-serif;
       }
 
-      .topColor a {
-        color: #292828;
+      .options {
+        /* border: 2px solid red; */
+        margin-right: 90px;
+        width: 40%;
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 30px;
+        /* padding-top: 50px; */
       }
 
-      .nav-item:hover {
-        border-bottom: 2px solid #f4a424;
+      .nav a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
       }
 
-      .nav-link:focus,
-      .nav-link:hover {
-        color: #242222;
+      .nav a:hover {
+        color: rgb(228, 43, 43);
+      }
+      .logo img {
+        width: 120px;
+      }
+
+      /* ***********************navbar css************************ */
+      body {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
       }
 
       #conty > div {
@@ -67,7 +94,7 @@
       #box2 {
         display: flex;
         justify-content: space-around;
-        margin-top: 100px;
+        margin-top: 120px;
       }
 
       #conty {
@@ -105,6 +132,20 @@
   </head>
 
   <body>
+    <div class="nav">
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./logo-no-background.png" alt="" />
+        </a>
+      </div>
+      <div class="options">
+        <a href="">About</a>
+        <a href="./discover.html">Discover</a>
+        <a href="">Membership</a>
+        <a href="./login.html">Logout</a>
+        <a href="./ContactUs.html">Contact </a>
+      </div>
+    </div>
     <div id="box2">
       <div id="conty"></div>
 
