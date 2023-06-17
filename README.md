@@ -11,8 +11,6 @@ The Hotel Booking Website provides a user-friendly interface with a focus on usa
 - **Interactive Hotel Listings:** Each hotel listing provides comprehensive details, including high-resolution images, amenities, room types, availability, and user ratings and reviews.
 - **Real-time Availability and Pricing:** The website integrates with a hotel management system to fetch real-time availability and pricing information for accurate search results and bookings.
 - **Secure Booking Process:** Users can confidently make bookings with a secure and encrypted payment gateway, ensuring the protection of their personal and financial information.
-- **User Profiles and Preferences:** Users can create profiles to manage their personal information, view booking history, save favorite hotels, and set preferences for a personalized experience.
-- **Multi-language and Localization:** The website supports multiple languages and provides localization features to cater to users from different regions.
 - **Social Media Integration:** Users can easily share their bookings and experiences on social media platforms, promoting the website and generating user engagement.
 - **Admin Dashboard:** An administrative dashboard allows authorized personnel to manage hotels, bookings, user accounts, and generate reports.
 
