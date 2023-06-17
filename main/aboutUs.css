@@ -14,7 +14,9 @@
    font-size: 50px;
    font-weight: 500;
    color: rgb(69, 62, 77);
+
    padding-top: 100px;
+
     text-align: center;
     justify-content: center;
 }
@@ -77,13 +79,16 @@
     margin-right: 100px; */
     /* border: 1px solid green; */
   }
+
  @media (max-width:991px){
     .container1>img{
         display: none;
     }
+
     .nav{
       display: none "";
     }
+
  }
 
 
