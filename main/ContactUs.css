@@ -153,7 +153,7 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Sofia", sans-serif;
   }
 
   .options {
@@ -166,6 +166,8 @@
     align-items: center;
     font-size: 20px;
     /* padding-top: 50px; */
+    font-family: "Sofia", sans-serif;
+  
   }
 
   .options a {
