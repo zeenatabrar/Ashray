@@ -1,7 +1,7 @@
 
 <img src="https://i.postimg.cc/KvNq6Xjb/logo-no-background.png" alt="image" width="300">
 
-# Hotel Booking Website
+# ASHRAY
 
 A modern and intuitive hotel booking website that allows users to search for hotels, view detailed information, and make bookings seamlessly.
 
