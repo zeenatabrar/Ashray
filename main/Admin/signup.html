@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 400px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin: 0 10px;
+      }
+
+      .container h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
+      }
+
+      .container input {
+        width: 100%;
+        padding: 12px 15px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+        font-size: 16px;
+      }
+
+      .container button {
+        width: 100%;
+        padding: 12px 0;
+        margin-top: 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #4caf50;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .container button:hover {
+        background-color: #45a049;
+      }
+
+      .container a {
+        display: block;
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+        text-decoration: none;
+        margin-top: 20px;
+      }
+
+      .container a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <script>
+      function signup() {
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var address = document.getElementById("address").value;
+        var email = document.getElementById("email").value;
+        var pass = document.getElementById("pass").value;
+
+        var userData = {
+          name: name,
+          age: age,
+          address: address,
+          email: email,
+          password: pass,
+        };
+
+        fetch("https://hotels-tn92.onrender.com/users", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userData),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            // Handle the response from the API if needed
+            console.log(data);
+            // Clear the input fields
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("address").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("pass").value = "";
+            alert("User registered successfully");
+          })
+          .catch((error) => {
+            // Handle any errors that occurred during the request
+            console.error(error);
+            alert("An error occurred while registering the user");
+          });
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- sign up -->
+    <div class="container" id="container">
+      <div>
+        <h1>PERSONAL DETAILS</h1>
+        <input type="text" placeholder="name" id="name" />
+        <input type="number" placeholder="age" id="age" />
+        <input type="text" placeholder="address" id="address" />
+        <input type="email" placeholder="email" id="email" />
+        <input type="password" placeholder="pass" id="pass" />
+        <button class="btn-second" onclick="signup()">Signup</button>
+        <a href="#">Already Have ACCOUNT?</a>
+        <h2>
+          <a href="./login.html">Login Here</a>
+        </h2>
+      </div>
+    </div>
+  </body>
+</html>

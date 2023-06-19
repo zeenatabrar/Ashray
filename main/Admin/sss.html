@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .length-div {
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .title {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .length {
+        font-style: italic;
+        font-size: 20px;
+      }
+      @media (max-width: 600px) {
+        .length-div {
+          width: 100%;
+        }
+      }
+      @media (min-width: 601px) and (max-width: 1200px) {
+        .length-div {
+          width: 45%;
+        }
+      }
+      @media (min-width: 1201px) {
+        .length-div {
+          width: 30%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="length-div">
+        <div class="title">Hotel Length</div>
+        <div class="length" id="hotel-length"></div>
+      </div>
+
+      <div class="length-div">
+        <div class="title">User Length</div>
+        <div class="length" id="user-length"></div>
+      </div>
+
+      <div class="length-div">
+        <div class="title">Booking Length</div>
+        <div class="length" id="booking-length"></div>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript code to calculate and display the lengths
+      const hotelLength = "Hotel Name".length;
+      const userLength = "Username".length;
+      const bookingLength = "Booking Reference Number".length;
+
+      document.getElementById("hotel-length").innerText = hotelLength;
+      document.getElementById("user-length").innerText = userLength;
+      document.getElementById("booking-length").innerText = bookingLength;
+    </script>
+  </body>
+</html>

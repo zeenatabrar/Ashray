@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Management</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        /* background-color: #f5f5f5; */
+        overflow-x: hidden;
+      }
+
+      /* Hide the scroll bar */
+      body::-webkit-scrollbar {
+        width: 0.5em;
+      }
+
+      body::-webkit-scrollbar-track {
+        background-color: #f4f4f4;
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: #888;
+      }
+
+      body::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      form label {
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      form input[type="text"],
+      form input[type="number"],
+      form input[type="email"],
+      form input[type="password"] {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+
+      form input[type="submit"] {
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table th,
+      table td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+      }
+
+      table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+
+      table td:last-child {
+        text-align: center;
+      }
+
+      button {
+        padding: 6px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:not(:last-child) {
+        margin-right: 5px;
+      }
+      .contai {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .length-div {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 26%;
+      }
+      .title {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .length {
+        font-style: italic;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User Management</h1>
+    <div class="contai">
+      <div class="length-div">
+        <div class="title">Hotel Length</div>
+        <div class="length" id="hotel-length"></div>
+      </div>
+
+      <div class="length-div">
+        <div class="title">User Length</div>
+        <div class="length" id="user-length"></div>
+      </div>
+
+      <div class="length-div">
+        <div class="title">Booking Length</div>
+        <div class="length" id="booking-length"></div>
+      </div>
+    </div>
+    <div class="container">
+      <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required />
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <input type="submit" value="Create User" />
+      </form>
+
+      <div id="users">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Address</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="userList"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      // Function to create a new user
+      function createUser() {
+        event.preventDefault(); // Prevent form submission
+
+        // Get form input values
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var address = document.getElementById("address").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        // Create user object
+        var user = {
+          name: name,
+          age: age,
+          address: address,
+          email: email,
+          password: password,
+        };
+
+        // Perform POST request to create the user
+        fetch("https://hotels-tn92.onrender.com/users", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            // Clear form fields
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("address").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("password").value = "";
+
+            // Refresh user list
+            getUsers();
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+
+      // Function to get all users
+      function getUsers() {
+        fetch("https://hotels-tn92.onrender.com/users")
+          .then((response) => response.json())
+          .then((data) => {
+            // Clear user list
+            var userList = document.getElementById("userList");
+            userList.innerHTML = "";
+
+            // Display each user
+            data.forEach((user) => {
+              var userRow = document.createElement("tr");
+              userRow.innerHTML = `
+                    <td>${user.name}</td>
+                    <td>${user.age}</td>
+                    <td>${user.address}</td>
+                    <td>${user.email}</td>
+                    <td>${user.password}</td>
+                    <td>
+                        <button onclick="editUser('${user.id}')">Edit</button>
+                        <button onclick="deleteUser('${user.id}')">Delete</button>
+                    </td>
+                `;
+
+              userList.appendChild(userRow);
+            });
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+
+      // Function to populate form fields with user data for editing
+      function editUser(userId) {
+        // Fetch user data by ID
+        fetch(`https://hotels-tn92.onrender.com/users/${userId}`)
+          .then((response) => response.json())
+          .then((data) => {
+            // Populate form fields with user data
+            document.getElementById("name").value = data.name;
+            document.getElementById("age").value = data.age;
+            document.getElementById("address").value = data.address;
+            document.getElementById("email").value = data.email;
+            document.getElementById("password").value = data.password;
+
+            // Set form submission to update the user
+            var userForm = document.getElementById("userForm");
+            userForm.onsubmit = function (event) {
+              event.preventDefault(); // Prevent form submission
+
+              // Update user object with new data
+              var updatedUser = {
+                name: document.getElementById("name").value,
+                age: document.getElementById("age").value,
+                address: document.getElementById("address").value,
+                email: document.getElementById("email").value,
+                password: document.getElementById("password").value,
+              };
+
+              // Perform PUT request to update the user
+              fetch(`https://hotels-tn92.onrender.com/users/${userId}`, {
+                method: "PUT",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(updatedUser),
+              })
+                .then((response) => response.json())
+                .then((data) => {
+                  // Clear form fields
+                  document.getElementById("name").value = "";
+                  document.getElementById("age").value = "";
+                  document.getElementById("address").value = "";
+                  document.getElementById("email").value = "";
+                  document.getElementById("password").value = "";
+
+                  // Reset form submission to create a user
+                  userForm.onsubmit = createUser;
+
+                  // Refresh user list
+                  getUsers();
+                })
+                .catch((error) => console.error("Error:", error));
+            };
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+
+      // Function to delete a user
+      function deleteUser(userId) {
+        // Perform DELETE request to delete the user
+        fetch(`https://hotels-tn92.onrender.com/users/${userId}`, {
+          method: "DELETE",
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            // Refresh user list
+            getUsers();
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+
+      // Initial load of users
+      getUsers();
+
+      const hotelLength = "Hotel Name".length;
+      const userLength = "Username".length;
+      const bookingLength = "Booking Reference Number".length;
+
+      document.getElementById("hotel-length").innerText = hotelLength;
+      document.getElementById("user-length").innerText = userLength;
+      document.getElementById("booking-length").innerText = bookingLength;
+    </script>
+  </body>
+</html>
