@@ -66,7 +66,7 @@ function display(data) {
     let box = document.createElement("div");
 
     let rating = document.createElement("h5");
-    rating.innerText = `⭐ ${Number(data[i].rating)}`;
+    rating.innerText = `⭐ ${Number(data[i].rating / 20)}`;
 
     let price = document.createElement("h5");
     price.innerText = `₹ ${Number(data[i].price) * 10} / Person`;
@@ -138,7 +138,7 @@ ratingBtn.addEventListener("change", function () {
     display(data);
   } else if (ratingBtn.value == 3) {
     let rate = data.filter(function (element) {
-      if (Number(element.rating) < Number(ratingBtn.value)) {
+      if (Number(element.rating / 20) < Number(ratingBtn.value)) {
         return true;
       } else {
         return false;
@@ -149,8 +149,8 @@ ratingBtn.addEventListener("change", function () {
   } else if (ratingBtn.value > 3) {
     let rate = data.filter(function (element) {
       if (
-        Number(element.rating) <= Number(ratingBtn.value) &&
-        Number(element.rating) > 3
+        Number(element.rating / 20) <= Number(ratingBtn.value) &&
+        Number(element.rating / 20) > 3
       ) {
         return true;
       } else {
